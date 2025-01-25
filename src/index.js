@@ -2,10 +2,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
-const element = (
-  <div>
-    <h1>My ToDo List</h1>
-    <input placeholder="search" />
+const ToDoList = () => {
+  return (
     <ul>
       <li>Install React</li>
       <li>Study</li>
@@ -13,8 +11,8 @@ const element = (
       <li>Build App</li>
       <li>Do HW</li>
     </ul>
-  </div>
-);
+  );
+};
 
 const AppHeader = () => {
   return <h1>My ToDo List</h1>;
