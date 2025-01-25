@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const element = (
-  <div>
-    <h1>My ToDo List</h1>
-    <input placeholder="search" />
+const ToDoList = () => {
+  return (
     <ul>
       <li>Install React</li>
       <li>Study</li>
@@ -12,7 +10,25 @@ const element = (
       <li>Build App</li>
       <li>Do HW</li>
     </ul>
-  </div>
-);
+  );
+};
 
-ReactDOM.render(element, document.getElementById("root"));
+const AppHeader = () => {
+  return <h1>My ToDo List</h1>;
+};
+
+const SearchPanel = () => {
+  return <input placeholder="search" />;
+};
+
+const App = () => {
+  return (
+    <div>
+      <AppHeader />
+      <SearchPanel />
+      <ToDoList />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
