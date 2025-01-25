@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import "./index.css";
 
 const element = (
   <div>
@@ -15,4 +16,23 @@ const element = (
   </div>
 );
 
-ReactDOM.render(element, document.getElementById("root"));
+const AppHeader = () => {
+  return <h1>My ToDo List</h1>;
+};
+
+const SearchPanel = () => {
+  return <input placeholder="search" />;
+};
+
+const App = () => {
+  return (
+    <div>
+      <AppHeader />
+      <SearchPanel />
+      <ToDoList />
+    </div>
+  );
+};
+
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
