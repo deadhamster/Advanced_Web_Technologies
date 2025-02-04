@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import AppHeader from "./components/AppHeader";
 import SearchPanel from "./components/SearchPanel";
 import ToDoList from "./components/ToDoList";
+import ItemStatusFilter from "./components/ItemStatusFilter";
 
 const App = () => {
   const toDoData = [
@@ -17,6 +18,7 @@ const App = () => {
       <AppHeader />
       <SearchPanel />
       <ToDoList todos={toDoData} />
+      <ItemStatusFilter />
     </div>
   );
 };
