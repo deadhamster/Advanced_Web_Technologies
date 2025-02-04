@@ -6,10 +6,10 @@ import ToDoList from "./components/ToDoList";
 
 const App = () => {
   const toDoData = [
-    { label: "Drink Tea", important: false },
-    { label: "Implement React Application", important: true },
-    { label: "Make notes from your study", important: false },
-    { label: "Do not drink alchohol", important: false },
+    { label: "Drink Tea", important: false, id: 1 },
+    { label: "Implement React Application", important: true, id: 2 },
+    { label: "Make notes from your study", important: false, id: 3 },
+    { label: "Do not drink alchohol", important: false, id: 4 },
   ];
 
   return (

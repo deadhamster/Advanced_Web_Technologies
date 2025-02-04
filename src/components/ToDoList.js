@@ -3,9 +3,10 @@ import ToDoListItem from "./ToDoListItem";
 
 const ToDoList = ({ todos }) => {
   const elements = todos.map((item) => {
+    const { id, ...itemProps } = item;
     return (
-      <li>
-        <ToDoListItem {...item} />
+      <li key={item.id}>
+        <ToDoListItem {...itemProps} />
       </li>
     );
   });
