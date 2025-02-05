@@ -3,12 +3,9 @@ import { Component } from "react";
 import "./ToDoListItem.css";
 
 export default class ToDoListItem extends Component {
-  constructor() {
-    super();
-    this.onLabelClick = () => {
-      console.log(`Done: ${this.props.label}`);
-    };
-  }
+  onLabelClick = () => {
+    console.log(`Done: ${this.props.label}`);
+  };
   render() {
     const { label, important = false } = this.props;
     const style = {
