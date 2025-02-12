@@ -35,6 +35,14 @@ export default class App extends Component {
     });
   };
 
+  onToggleImportant = (id) => {
+    console.log("Toggle Important", id);
+  };
+
+  onToggleDone = (id) => {
+    console.log("Toggle Done", id);
+  };
+
   deleteItem = (id) => {
     this.setState(({ todoData }) => {
       const idx = todoData.findIndex((element) => element.id === id);
@@ -55,7 +63,12 @@ export default class App extends Component {
           <SearchPanel />
           <ItemStatusFilter />
         </div>
-        <ToDoList todos={this.state.todoData} onDeleted={this.deleteItem} />
+        <ToDoList
+          todos={this.state.todoData}
+          onDeleted={this.deleteItem}
+          onToggleImportant={this.onToggleImportant}
+          onToggleDone={this.onToggleDone}
+        />
         <ItemAddForm onItemAdded={this.addItem} />
       </div>
     );
